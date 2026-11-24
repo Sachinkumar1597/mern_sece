@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        console.log('Hello')
+        console.log("JavaScript");
+
+        // Keywords and Variables
+        // var , let , const
+
+        // var age;  Deceleration
+        // age = 30 Initialization
+        var age = 20;
+        age = 30; // Re-Initialization
+        var age = 40; // Re-Deceleration
+        // console.log("Age : ",age);
+
+        // let
+        let course = "Mern";
+        course = "dsa" // Re-Initialization
+        // let course = "java"; // Re-Deceleration is not possible
+        // console.log("Course ",course);
+
+        // const
+        const pan = "SDFGH3456";
+        // pan="Sagar"; // Re-Initialization is not possible
+        // const pan = "Kumar" // Re-Deceleration is not possible
+        console.log(pan);
+
+
+        //  0 * 0 = 0
+        //  1 * 0 = 0
+        //  0 * 1 = 0
+        //  1 * 1 = 1
+        let username = "admin";
+        let password = "admin123";
+
+        if (username == "admin" && password == "admin123") {
+            console.log("Login Success");
+        } else {
+            console.log("Login Failed");
+        }
+
+        // Functions
+
+        function student(name, clg = "sece") {
+            // console.log("Hello", name, "Welcome to ", clg," College");
+            console.log(`Hello ${name} welcome to ${clg} college`);
+        }
+        // student('Sneha',"sece");
+        // student('Kumar',"sece");
+        // student('Priya',"sece");
+        // student('Sagar',"sece");
+        student('Sneha');
+        student('Kumar');
+        student('Priya');
+        student('Sagar');
+
+        // Create Employee Function 
+        // Names and Different Company with same college
+
+        let data1 = function () {
+            return "Hello JavaScript";
+        }
+        console.log(data1());
+
+        // ======Arrow Function==========
+        // let mult1 = () => {
+        //     return "hello Arrow function";
+        // }
+        // console.log(mult());
+
+        // ========================
+
+        // let mult = (a, b) => {
+        //     return a * b;
+        // }
+        // console.log(mult(2, 4));
+
+        // in function passing the another function as
+        // an argument
+
+        function sece(callback) {
+            console.log("Welcome sece");
+            callback()
+        }
+        function stud() {
+            console.log("Display Students");
+        }
+        sece(stud)
+
+        // Whatsapp
+        // Notification
+
+        // Promise
+
+        // resolve , reject fullfilled
+
+       let fetch_api = new Promise((resolve,reject)=>{
+           let api = false;
+           if (api){
+            resolve("Fetched Api data")
+           }else{
+            setTimeout(()=>{
+                reject("Failed to fetch api data");
+            },2000)
+           }
+       })
+    //    console.log(fetch_api);
+       fetch_api.then(data => console.log(data))
+       
+
+    
+    //    console.log(fetch_api());
+
+
+
+
+
+
+
+        // =====================
+
+        let order = new Promise((resolve, reject) => {
+            let foodReady = true;
+            if (foodReady) {
+                resolve("Food is ready!");
+            } else {
+                reject("Food is not available");
+            }
+        });
+        // console.log(order);
+        order
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        // ===============
+
+
+
+
+    </script>
+</body>
+
+</html>
